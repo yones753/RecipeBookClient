@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import { AuthProvider } from "./components/auth/AuthContext";
+import TopNavBar from "./components/layout/TopNavBar";
+import RoutesComponent from "./components/routes/RoutesComponent";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AuthProvider>
+      <div className="app">
+        <header style={{ backgroundColor: "#F9F9F9" }}>
+          <TopNavBar />
+        </header>
+        <div className="m-5">
+          <RoutesComponent />
+        </div>
+      </div>
+    </AuthProvider>
   );
 }
 

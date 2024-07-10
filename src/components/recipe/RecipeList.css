@@ -1,0 +1,16 @@
+.recipe-list {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card-recipe-title {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.recipe-item-title {
+    font-size: 18px;
+    font-weight: 500;
+}
